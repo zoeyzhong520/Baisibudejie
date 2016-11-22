@@ -238,6 +238,10 @@
 		BC45BECC1DE2F74800C06ECE /* tabBar_publish_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC45BDEE1DE2F74800C06ECE /* tabBar_publish_icon@2x.png */; };
 		BC45BECD1DE2F74800C06ECE /* tabBar_publish_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC45BDEF1DE2F74800C06ECE /* tabBar_publish_icon@3x.png */; };
 		BC45BECF1DE2F8F200C06ECE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC45BECE1DE2F8F200C06ECE /* Images.xcassets */; };
+		BC6EBF291DE418D8002963E5 /* BDJDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EBF281DE418D8002963E5 /* BDJDownload.m */; };
+		BC6EBF2C1DE41F64002963E5 /* BDJEssenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EBF2B1DE41F64002963E5 /* BDJEssenceModel.m */; };
+		BC6EBF301DE4346C002963E5 /* EssenceVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EBF2E1DE4346C002963E5 /* EssenceVideoCell.m */; };
+		BC6EBF311DE4346C002963E5 /* EssenceVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6EBF2F1DE4346C002963E5 /* EssenceVideoCell.xib */; };
 		D3E58DD3B8015B741F5341CE /* Pods_Baisibudejie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120CD6BDA30B23BD62AA4CE /* Pods_Baisibudejie.framework */; };
 /* End PBXBuildFile section */
 
@@ -512,6 +516,13 @@
 		BC45BDEF1DE2F74800C06ECE /* tabBar_publish_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar_publish_icon@3x.png"; sourceTree = "<group>"; };
 		BC45BECE1DE2F8F200C06ECE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC45BED01DE2F92500C06ECE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BC6EBF271DE418D8002963E5 /* BDJDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJDownload.h; sourceTree = "<group>"; };
+		BC6EBF281DE418D8002963E5 /* BDJDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJDownload.m; sourceTree = "<group>"; };
+		BC6EBF2A1DE41F64002963E5 /* BDJEssenceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJEssenceModel.h; sourceTree = "<group>"; };
+		BC6EBF2B1DE41F64002963E5 /* BDJEssenceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJEssenceModel.m; sourceTree = "<group>"; };
+		BC6EBF2D1DE4346C002963E5 /* EssenceVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssenceVideoCell.h; sourceTree = "<group>"; };
+		BC6EBF2E1DE4346C002963E5 /* EssenceVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssenceVideoCell.m; sourceTree = "<group>"; };
+		BC6EBF2F1DE4346C002963E5 /* EssenceVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EssenceVideoCell.xib; sourceTree = "<group>"; };
 		E120CD6BDA30B23BD62AA4CE /* Pods_Baisibudejie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baisibudejie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -719,6 +730,8 @@
 				BC45BED01DE2F92500C06ECE /* PrefixHeader.pch */,
 				BC45BCFE1DE2F74700C06ECE /* UIView+Utill.h */,
 				BC45BCFF1DE2F74700C06ECE /* UIView+Utill.m */,
+				BC6EBF271DE418D8002963E5 /* BDJDownload.h */,
+				BC6EBF281DE418D8002963E5 /* BDJDownload.m */,
 			);
 			path = "Commom(公共)";
 			sourceTree = "<group>";
@@ -745,6 +758,8 @@
 		BC45BD041DE2F74700C06ECE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EBF2A1DE41F64002963E5 /* BDJEssenceModel.h */,
+				BC6EBF2B1DE41F64002963E5 /* BDJEssenceModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -752,6 +767,9 @@
 		BC45BD051DE2F74700C06ECE /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EBF2D1DE4346C002963E5 /* EssenceVideoCell.h */,
+				BC6EBF2E1DE4346C002963E5 /* EssenceVideoCell.m */,
+				BC6EBF2F1DE4346C002963E5 /* EssenceVideoCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1260,6 +1278,7 @@
 				BC45BE341DE2F74800C06ECE /* playButton.png in Resources */,
 				BC45BE7B1DE2F74800C06ECE /* mine-setting-icon@3x.png in Resources */,
 				BC45BE6B1DE2F74800C06ECE /* MainTagSubIconClick.png in Resources */,
+				BC6EBF311DE4346C002963E5 /* EssenceVideoCell.xib in Resources */,
 				BC45BE821DE2F74800C06ECE /* nav_coin_icon.png in Resources */,
 				BC45BEBD1DE2F74800C06ECE /* tabBar_me_click_icon@2x.png in Resources */,
 				BC45BE9C1DE2F74800C06ECE /* publish-review@2x.png in Resources */,
@@ -1521,13 +1540,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC45BCBA1DE2F66100C06ECE /* ViewController.m in Sources */,
+				BC6EBF2C1DE41F64002963E5 /* BDJEssenceModel.m in Sources */,
 				BC45BDF71DE2F74800C06ECE /* EssenceViewController.m in Sources */,
+				BC6EBF291DE418D8002963E5 /* BDJDownload.m in Sources */,
 				BC45BCB71DE2F66100C06ECE /* AppDelegate.m in Sources */,
 				BC45BDF81DE2F74800C06ECE /* NewsViewController.m in Sources */,
 				BC45BDF41DE2F74800C06ECE /* BDJTabBar.m in Sources */,
 				BC45BDF61DE2F74800C06ECE /* UIView+Utill.m in Sources */,
 				BC45BDF01DE2F74800C06ECE /* AddViewController.m in Sources */,
 				BC45BDF11DE2F74800C06ECE /* AttentionViewController.m in Sources */,
+				BC6EBF301DE4346C002963E5 /* EssenceVideoCell.m in Sources */,
 				BC45BDF21DE2F74800C06ECE /* UIButton+Utill.m in Sources */,
 				BC45BDF91DE2F74800C06ECE /* ProfileViewController.m in Sources */,
 				BC45BDF51DE2F74800C06ECE /* BDJTabBarController.m in Sources */,
@@ -1687,7 +1709,7 @@
 				GCC_PREFIX_HEADER = "/Users/qianfeng/Desktop/zzj.项目/百思不得姐/Baisibudejie/Baisibudejie/classes/Commom(公共)/PrefixHeader.pch";
 				INFOPLIST_FILE = Baisibudejie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzj.Baisibudejie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzj.Baisibudejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1705,7 +1727,7 @@
 				GCC_PREFIX_HEADER = "/Users/qianfeng/Desktop/zzj.项目/百思不得姐/Baisibudejie/Baisibudejie/classes/Commom(公共)/PrefixHeader.pch";
 				INFOPLIST_FILE = Baisibudejie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzj.Baisibudejie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzj.Baisibudejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
