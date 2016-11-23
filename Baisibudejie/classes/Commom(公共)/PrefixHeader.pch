@@ -30,6 +30,7 @@
 #import "BDJConst.h"
 #import "UIView+Utill.h"
 #import "BDJDownload.h"
+#import "ProgressHUD/ProgressHUD.h"
 
 #endif
 

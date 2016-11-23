@@ -52,11 +52,8 @@
                                 <state key="normal" title="...">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="clickMoreBtn" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dSY-le-b5o"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNc-eE-eWO" userLabel="descLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNc-eE-eWO" userLabel="descLabel">
                                 <rect key="frame" x="10" y="54" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,14 +68,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-Hx-G8c" userLabel="commentView">
                                 <rect key="frame" x="10" y="215" width="394" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOU-8K-W1T" userLabel="commentLabel">
-                                        <rect key="frame" x="10" y="10" width="374" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOU-8K-W1T" userLabel="commentLabel">
+                                        <rect key="frame" x="10" y="10" width="374" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bOU-8K-W1T" secondAttribute="bottom" constant="10" id="5Xk-6e-HmD"/>
                                     <constraint firstAttribute="height" constant="60" id="Cdy-hx-ixT"/>
@@ -86,6 +83,11 @@
                                     <constraint firstAttribute="trailing" secondItem="bOU-8K-W1T" secondAttribute="trailing" constant="10" id="nAd-nA-HSP"/>
                                     <constraint firstItem="bOU-8K-W1T" firstAttribute="leading" secondItem="Q44-Hx-G8c" secondAttribute="leading" constant="10" id="yWq-Mf-L0A"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Xk-6e-HmD"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laB-pu-RnB" userLabel="tagView">
                                 <rect key="frame" x="10" y="285" width="394" height="30"/>
@@ -127,7 +129,7 @@
                                 </state>
                                 <state key="selected" image="mainCellDingClick.png"/>
                                 <connections>
-                                    <action selector="dingAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YgJ-Wb-caz"/>
+                                    <action selector="dingAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c42-38-7r2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43u-kj-THu" userLabel="caiBtn">
@@ -141,7 +143,7 @@
                                 </state>
                                 <state key="selected" image="mainCellCaiClick.png"/>
                                 <connections>
-                                    <action selector="caiAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a14-JK-5Fa"/>
+                                    <action selector="caiAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pv4-dO-Fbm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-5z-xos" userLabel="shareBtn">
@@ -155,7 +157,7 @@
                                 </state>
                                 <state key="selected" image="mainCellShareClick.png"/>
                                 <connections>
-                                    <action selector="shareAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="o7D-vD-d3D"/>
+                                    <action selector="shareAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wwD-ff-HeV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-a1-EPI" userLabel="commentBtn">
@@ -169,7 +171,7 @@
                                 </state>
                                 <state key="selected" image="mainCellCommentClick.png"/>
                                 <connections>
-                                    <action selector="commentAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gZy-kb-SkX"/>
+                                    <action selector="commentAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bBp-9B-hvD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-ph-uRe">

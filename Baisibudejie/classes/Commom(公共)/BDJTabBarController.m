@@ -8,6 +8,8 @@
 
 #import "BDJTabBarController.h"
 #import "BDJTabBar.h"
+#import "BDJMenu.h"
+#import "EssenceViewController.h"
 
 @interface BDJTabBarController ()
 
@@ -23,9 +25,76 @@
     //使用自定制的tabbar
     [self setValue:[[BDJTabBar alloc] init] forKey:@"tabBar"];
     
-    
     //创建视图控制器
     [self createViewControllers];
+    
+    //获取菜单数据
+    [self loadMenuData];
+    
+}
+
+//获取菜单数据
+- (void)loadMenuData {
+    
+    NSString *filePath = [self menuFilePath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        
+        //读文件
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        BDJMenu *menu = [[BDJMenu alloc] initWithData:data error:nil];
+        
+        //显示
+        [self showAllMenuData:menu];
+   
+    }
+    
+    //更新菜单数据
+    [self downloadMenuData];
+    
+}
+
+//下载菜单数据
+- (void)downloadMenuData {
+    
+    //http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/
+    [BDJDownload downloadWithURLString:@"http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/" success:^(NSData *data) {
+        
+        //解析
+        BDJMenu *menu = [[BDJMenu alloc] initWithData:data error:nil];
+        
+        NSString *path = [self menuFilePath];
+        
+        //如果plist文件不存在，显示菜单数据
+        if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            
+            [self showAllMenuData:menu];
+        }
+        
+        //存到本地
+        [data writeToFile:path atomically:YES];
+        
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+//本地存储菜单数据的文件名
+- (NSString *)menuFilePath {
+    
+    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    
+    return [docPath stringByAppendingPathComponent:@"menu.plist"];
+}
+
+//显示菜单数据
+- (void)showAllMenuData:(BDJMenu *)menu {
+    
+    //设置精华的菜单数据
+    UINavigationController *essenceNavCtrl = [self.viewControllers firstObject];
+    
+    EssenceViewController *essenceCtrl = [essenceNavCtrl.viewControllers firstObject];
+    essenceCtrl.subMenus = [[menu.menus firstObject] submenus];
+    
 }
 
 //创建视图控制器

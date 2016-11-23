@@ -17,9 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *paseTimeLabel;
 
-//更多
-- (IBAction)clickMoreBtn;
-
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
@@ -27,9 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *playNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *playTimeLabel;
-
-//播放按钮
-- (IBAction)playAction;
 
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
@@ -43,17 +37,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 
-//顶一下
-- (IBAction)dingAction:(UIButton *)sender;
 
-//踩一下
-- (IBAction)caiAction:(UIButton *)sender;
+//播放按钮
+- (IBAction)playAction;
 
-//分享
-- (IBAction)shareAction:(UIButton *)sender;
-
-//评论
-- (IBAction)commentAction:(UIButton *)sender;
 
 //图片的高度
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHCons;
@@ -66,6 +53,37 @@
 @end
 
 @implementation EssenceVideoCell
+
+//播放
+- (IBAction)playAction {
+    
+    NSLog(@"playAction");
+}
+
+//顶一下
+- (IBAction)dingAction:(id)sender {
+    
+    NSLog(@"dingAction");
+}
+
+//踩一下
+- (IBAction)caiAction:(id)sender {
+    
+    NSLog(@"caiAction");
+}
+
+//分享
+- (IBAction)shareAction:(id)sender {
+    
+    NSLog(@"shareAction");
+}
+
+//评论
+- (IBAction)commentAction:(id)sender {
+    
+    NSLog(@"commentAction");
+}
+
 
 + (EssenceVideoCell *)videoCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath withModel:(BDJEssenceDetail *)detailModel {
     
@@ -91,7 +109,6 @@
     //用户名
     self.userNameLabel.text = detailModel.u.name;
     
-    
     //时间
     self.paseTimeLabel.text = detailModel.passtime;
     
@@ -109,7 +126,7 @@
     self.imageHCons.constant = imageH;
     
     //播放次数
-    self.playTimeLabel.text = [detailModel.video.playcount stringValue];
+    self.playNumberLabel.text = [detailModel.video.playcount stringValue];
     
     //视频时间
     NSInteger min = 0;
@@ -120,10 +137,28 @@
     }
     self.playTimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", min, sec];
     
+    
+    
     //评论文字
     if (detailModel.top_comments.count > 0) {
         BDJEssenceComment *comment = [detailModel.top_comments firstObject];
         self.commentLabel.text = comment.content;
+    }else{
+        //没有评论的部分
+        self.commentLabel.text = nil;
+    }
+    
+    //强制cell布局
+    [self layoutIfNeeded];
+    
+    if (detailModel.top_comments.count > 0) {
+        
+        self.commentViewYCons.constant = 10;
+        self.commentViewHCons.constant = self.commentLabel.frame.size.height + 10 + 10;
+    }else{
+        //没有评论的部分
+        self.commentViewHCons.constant = 0;
+        self.commentViewYCons.constant = 0;
     }
     
     //标签
@@ -140,6 +175,12 @@
     [self.shareBtn setTitle:[detailModel.forward stringValue] forState:UIControlStateNormal];
     [self.commentBtn setTitle:detailModel.comment forState:UIControlStateNormal];
     
+    //强制刷新一次
+    [self layoutIfNeeded];
+    
+    //获取cell的高度
+    detailModel.cellHeight = @(CGRectGetMaxY(self.dingBtn.frame) + 10 + 10);
+    
 }
 
 - (void)awakeFromNib {
@@ -153,19 +194,11 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)clickMoreBtn {
-}
-- (IBAction)playAction {
-}
-- (IBAction)dingAction:(UIButton *)sender {
-}
 
-- (IBAction)caiAction:(UIButton *)sender {
-}
 
-- (IBAction)shareAction:(UIButton *)sender {
-}
 
-- (IBAction)commentAction:(UIButton *)sender {
-}
+
+
+
+
 @end

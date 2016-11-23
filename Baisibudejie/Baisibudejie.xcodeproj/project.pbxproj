@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC299F791DE5795B00B479E4 /* BDJMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BC299F781DE5795B00B479E4 /* BDJMenu.m */; };
+		BC299F7C1DE5865100B479E4 /* BDJMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC299F7B1DE5865100B479E4 /* BDJMenuViewController.m */; };
+		BC299F7F1DE5882400B479E4 /* BDJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC299F7E1DE5882400B479E4 /* BDJTableViewController.m */; };
 		BC45BCB41DE2F66100C06ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC45BCB31DE2F66100C06ECE /* main.m */; };
 		BC45BCB71DE2F66100C06ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC45BCB61DE2F66100C06ECE /* AppDelegate.m */; };
 		BC45BCBA1DE2F66100C06ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC45BCB91DE2F66100C06ECE /* ViewController.m */; };
@@ -265,6 +268,12 @@
 /* Begin PBXFileReference section */
 		8773EEF142EAE463E6E5B7EB /* Pods-Baisibudejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisibudejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baisibudejie/Pods-Baisibudejie.release.xcconfig"; sourceTree = "<group>"; };
 		A83828C1A8F6252371D15DBB /* Pods-Baisibudejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisibudejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisibudejie/Pods-Baisibudejie.debug.xcconfig"; sourceTree = "<group>"; };
+		BC299F771DE5795B00B479E4 /* BDJMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJMenu.h; sourceTree = "<group>"; };
+		BC299F781DE5795B00B479E4 /* BDJMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJMenu.m; sourceTree = "<group>"; };
+		BC299F7A1DE5865100B479E4 /* BDJMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJMenuViewController.h; sourceTree = "<group>"; };
+		BC299F7B1DE5865100B479E4 /* BDJMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJMenuViewController.m; sourceTree = "<group>"; };
+		BC299F7D1DE5882400B479E4 /* BDJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJTableViewController.h; sourceTree = "<group>"; };
+		BC299F7E1DE5882400B479E4 /* BDJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJTableViewController.m; sourceTree = "<group>"; };
 		BC45BCAF1DE2F66100C06ECE /* Baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC45BCB31DE2F66100C06ECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC45BCB51DE2F66100C06ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -751,6 +760,10 @@
 			children = (
 				BC45BD021DE2F74700C06ECE /* EssenceViewController.h */,
 				BC45BD031DE2F74700C06ECE /* EssenceViewController.m */,
+				BC299F7A1DE5865100B479E4 /* BDJMenuViewController.h */,
+				BC299F7B1DE5865100B479E4 /* BDJMenuViewController.m */,
+				BC299F7D1DE5882400B479E4 /* BDJTableViewController.h */,
+				BC299F7E1DE5882400B479E4 /* BDJTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -760,6 +773,8 @@
 			children = (
 				BC6EBF2A1DE41F64002963E5 /* BDJEssenceModel.h */,
 				BC6EBF2B1DE41F64002963E5 /* BDJEssenceModel.m */,
+				BC299F771DE5795B00B479E4 /* BDJMenu.h */,
+				BC299F781DE5795B00B479E4 /* BDJMenu.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1543,12 +1558,15 @@
 				BC6EBF2C1DE41F64002963E5 /* BDJEssenceModel.m in Sources */,
 				BC45BDF71DE2F74800C06ECE /* EssenceViewController.m in Sources */,
 				BC6EBF291DE418D8002963E5 /* BDJDownload.m in Sources */,
+				BC299F7C1DE5865100B479E4 /* BDJMenuViewController.m in Sources */,
 				BC45BCB71DE2F66100C06ECE /* AppDelegate.m in Sources */,
 				BC45BDF81DE2F74800C06ECE /* NewsViewController.m in Sources */,
 				BC45BDF41DE2F74800C06ECE /* BDJTabBar.m in Sources */,
 				BC45BDF61DE2F74800C06ECE /* UIView+Utill.m in Sources */,
+				BC299F7F1DE5882400B479E4 /* BDJTableViewController.m in Sources */,
 				BC45BDF01DE2F74800C06ECE /* AddViewController.m in Sources */,
 				BC45BDF11DE2F74800C06ECE /* AttentionViewController.m in Sources */,
+				BC299F791DE5795B00B479E4 /* BDJMenu.m in Sources */,
 				BC6EBF301DE4346C002963E5 /* EssenceVideoCell.m in Sources */,
 				BC45BDF21DE2F74800C06ECE /* UIButton+Utill.m in Sources */,
 				BC45BDF91DE2F74800C06ECE /* ProfileViewController.m in Sources */,
