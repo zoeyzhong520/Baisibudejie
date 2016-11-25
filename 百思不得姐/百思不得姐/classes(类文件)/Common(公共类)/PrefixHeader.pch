@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by gaokunpeng on 2016/11/21.
+//  Copyright © 2016年 gaokunpeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+    //1.OC和UI库
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    //2.cocoapods管理的库
+    #import <AFNetworking/AFNetworking.h>
+    #import <JSONModel/JSONModel.h>
+    #import <Masonry/Masonry.h>
+    #import <MJRefresh/MJRefresh.h>
+    #import <SDWebImage/UIImageView+WebCache.h>
+    #import <ProgressHUD/ProgressHUD.h>
+
+    //3.自己写的头文件
+    #import "UIButton+Util.h"
+    #import "BDJConst.h"
+    #import "UIView+Util.h"
+    #import "BDJDownloader.h"
+    #import "UILabel+Util.h"    
+
+
+#endif
+
+
+#endif /* PrefixHeader_pch */
